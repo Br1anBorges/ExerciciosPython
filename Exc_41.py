@@ -8,27 +8,32 @@ dever entrar com o peso de cada nota para calculo da media
 ponderada.
 """
 
-p1= int(input("Insira a nota da P1: "))
-p2= int(input("Insira a nota da p2: "))
-
-peso= 0
-while peso == 0:
-    resposta= "S"
+resposta= 0
+while resposta == 0:
+    resposta1= "S"
     auxiliar=0
-    while resposta in "Ss":
+    while resposta1 in "Ss":
+        prova1=int(input("Digite a nota da P1: "))
+        prova2=int(input("Digite a nota da P2: "))
+        peso1=int(input("Insira o peso da P1 para calcular a média: "))
+        peso2=int(input("Insira o peso da P2 para calcular a média: "))
+        lista= [peso1, peso2]
+        media= (lista[0]*prova1 + lista[1]*prova2) / (peso1+peso2)
 
-        peso=int(input("Insira o PESO, para calcular a média ponderada"))
-        auxiliar+= peso
-        soma= peso*p1 + peso*p2
-        media = soma/auxiliar
         if media >= 7.5:
             print (f'O aluno foi aprovado')
         elif media < 7.5:
-            p3= int(input("Insira a nota da p3: "))
-            soma= peso*p1 + peso*p2 + peso*p3
-        else:
-            print(f'O aluno foi reprovado')
-        resposta= str(input("Deseja Informar mais peso? (S/N) ")).upper()[0]
+            prova3= int(input("Digite a nota 3: "))
+            peso3=int(input("Digite o peso da P3 para somar na média : "))
+            lista.append(peso3)
+            media+= (lista[2]*prova3) / peso3
+            if media > 6:
+                print(f'O aluno foi aprovado!')
+            else:
+                print(f'O aluno foi reprovado')
+            print(media)
+        resposta1= str(input("Deseja Informar mais peso? (S/N) ")).upper()[0]
+    resposta = 1
 
     
     
