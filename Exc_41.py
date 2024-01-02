@@ -17,21 +17,17 @@ while resposta == 0:
         prova2=int(input("Digite a nota da P2: "))
         peso1=int(input("Insira o peso da P1 para calcular a média: "))
         peso2=int(input("Insira o peso da P2 para calcular a média: "))
-        lista= [peso1, peso2]
-        media= (lista[0]*prova1 + lista[1]*prova2) / (peso1+peso2)
-
+        media= (prova1*peso1 + prova2*peso2) / (peso1+peso2)
         if media >= 7.5:
             print (f'O aluno foi aprovado')
-        elif media < 7.5:
+        else:
             prova3= int(input("Digite a nota 3: "))
             peso3=int(input("Digite o peso da P3 para somar na média : "))
-            lista.append(peso3)
-            media+= (lista[2]*prova3) / peso3
+            media = (prova1*peso1 + prova2*peso2 + prova3*peso3) / (peso1+peso2+peso3)
             if media > 6:
                 print(f'O aluno foi aprovado!')
             else:
                 print(f'O aluno foi reprovado')
-            print(media)
         resposta1= str(input("Deseja Informar mais peso? (S/N) ")).upper()[0]
     resposta = 1
 
