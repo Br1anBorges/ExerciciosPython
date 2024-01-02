@@ -11,7 +11,9 @@ varE= int(input("Digite o valor de E: "))
 
 lista=[varA,varB,varC,varD,varE]
 
-print (f'{lista} \n O maior valor é: {min (lista)}, O menor valor é: {max(lista)}')
+print (f'{lista} \n O menor valor é: {min (lista)}, O maior valor é: {max(lista)}')
 
-auxiliar= varA > varB,varC,varD,varE and varB < varA,varC,varD, varE
-print(auxiliar)
+if varA > varB and varB > varC and varC > varD and varD > varE:
+    print (f'O menor valor é: {varE}\nO maior valor é: {varA}')
+elif varB > varA and varA > varC and varC > varD and varD > varE:
+    print("continuar depois")

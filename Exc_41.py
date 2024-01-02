@@ -28,7 +28,7 @@ while resposta == 0:
                 print(f'O aluno foi aprovado!')
             else:
                 print(f'O aluno foi reprovado')
-        resposta1= str(input("Deseja Informar mais peso? (S/N) ")).upper()[0]
+        resposta1= str(input("Deseja Informar repetir o processo? (S/N) ")).upper()[0]
     resposta = 1
 
     

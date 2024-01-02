@@ -10,11 +10,9 @@ medida2 =random.randint (0,100)
 medida3 = random.randint (0,100)
 print (medida1, medida2, medida3)
 
-resultado = medida1 > medida2 and medida1 > medida3
-print (resultado)
-'''if medida1 > medida2 and  medida1 >medida3:
+if medida1 > medida2 and  medida1 >medida3:
     print (medida1)
 elif medida2> medida1 and medida2 > medida3:
     print (medida2)
 else:
-    print (medida3)'''
+    print (medida3)
