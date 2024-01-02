@@ -13,7 +13,7 @@ gasolina é R$ 3,30 e o preço do litro do álcool é R$ 2,90
 '''
  #ENTRADA
 quantos_Litros= float(input("\nQuantos litros foi vendido?\n"))
-resposta = str(input("\nQual é o tipo de combustivel?\n\nA: Álcool\nG: Gasolina\n*2")).upper()
+resposta = str(input("\nQual é o tipo de combustivel?\n\nA: Álcool\nG: Gasolina\n\n")).upper()
 litro_Gasolina= 3.30
 litro_Alcool= 2.90
 preco_Gasolina=0
