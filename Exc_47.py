@@ -6,15 +6,16 @@ mensagem de erro e voltando a pedir as informações.
 
 #ENTRADA
 
-usuario=str(input("Digite seu usuário:\n")).upper
-senha=str(input('Digite sua senha:\n')).upper
-
+auxiliar=0
 #PROCESSAMENTO
 
-if usuario == senha:
-    while usuario == senha:
-        print('!!!ERRO!!!\nInforme novamente o usuário e a senha:\n')
-        usuario=str(input("Digite seu usuário:\n")).upper
-        senha=str(input('Digite sua senha:\n')).upper  
-else:
-    print('Cadastrado!')
+while auxiliar == 0:
+        usuario=str(input("Digite seu usuário:\n"))
+        senha=str(input('Digite sua senha:\n'))
+
+        if usuario != senha:
+                print('\nUsuario cadastrado\n')
+                auxiliar=1
+        else:
+            print('\nERRO!!! NÃO É POSSIVEL CADASTRAR USUARIO E SENHA IGUAIS!\n')
+        
