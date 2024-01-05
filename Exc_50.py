@@ -27,9 +27,5 @@ while resposta in "S":
                 pais_A= pais_A+((taxa_Pais_A/100)*pais_A)
                 pais_B=pais_B+((taxa_Pais_B/100)*pais_B)
 
-
+    print('Vai levar {} anos para ultrapassar a população'.format(contador))
     resposta=str(input('Deseja repetir a operação? [S/N]\n')).strip().upper()[0]
-
-
-
-print('Vai levar {} anos para ultrapassar a população'.format(contador))
